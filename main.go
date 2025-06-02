@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"GWStore/routes"
+	"github.com/grasieliw/GWStore/routes"
 
 	_ "github.com/lib/pq"
 )

@@ -1,6 +1,6 @@
 package models
 
-import "GWStore/db"
+import "github.com/grasieliw/GWStore/db"
 
 type Produtos struct {
 	Id         int

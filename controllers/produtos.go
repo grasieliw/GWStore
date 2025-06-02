@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"GWStore/models"
 	"html/template"
 	"net/http"
+
+	"github.com/grasieliw/GWStore/models"
 )
 
 var temp = template.Must(template.ParseGlob("templates/*.html"))

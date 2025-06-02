@@ -1,4 +1,4 @@
-module GWStore
+module github.com/grasieliw/GWStore
 
 go 1.24.1
 

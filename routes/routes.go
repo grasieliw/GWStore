@@ -1,8 +1,9 @@
 package routes
 
 import (
-	"GWStore/controllers"
 	"net/http"
+
+	"github.com/grasieliw/GWStore/controllers"
 )
 
 func CarregaRotas() {
