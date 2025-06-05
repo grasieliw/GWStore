@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/grasieliw/GWStore/routes"
 
@@ -10,6 +11,11 @@ import (
 
 func main() {
 	routes.CarregaRotas()
-	http.ListenAndServe(":8080", nil)
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // fallback para local
+	}
+
+	http.ListenAndServe(":"+port, nil)
 }
