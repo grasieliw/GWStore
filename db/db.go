@@ -3,12 +3,14 @@ package db
 import (
 	"database/sql"
 
+	"os"
+
 	_ "github.com/lib/pq"
 )
 
 func ConectaBancoDados() *sql.DB {
-	conexao := "user=postgres dbname=GW_store password=Grasieli11 host=localhost sslmode=disable"
-	db, err := sql.Open("postgres", conexao)
+	connStr := os.Getenv("DATABASE_URL")
+	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err.Error())
 	}
